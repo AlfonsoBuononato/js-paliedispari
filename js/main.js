@@ -48,12 +48,15 @@ var inserisciPariDispari = prompt("inserisci pari o dispari.").toLowerCase().tri
 while(inserisciPariDispari !== "pari" && inserisciPariDispari !== "dispari"){
     inserisciPariDispari = prompt("DEVI INSERIRE PARI O DISPARI").toLowerCase().trim();
 }
+console.log("inserisci pari o dispari: " + inserisciPariDispari);
 
 var numero = parseInt(prompt("inserisci un numero da 1 a 5."))
 //VALIDAZIONE NUMERO
 while(isNaN(numero) || numero < 1 || numero > 5){
     numero = parseInt(prompt("DEVI INSERIRE UN NUMERO DA 1 A 5"));
 }
+console.log("inserisci un numero da 1 a 5: " + numero);
+
 
 var numeroComputer = 0;
 var numeroRandom = generaNumero(numeroComputer);
