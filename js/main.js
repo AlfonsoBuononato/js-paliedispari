@@ -81,20 +81,25 @@ if(parametroPariDispari === inserisciPariDispari){
     console.log("HAI PERSO");
 }
 
-/*UTILITIES FUNCTION*/
 
-/* 
-* LA FUNZIONA "generaNumero" ANDRA A DICHIARARE UN NUMERO RANDOM GENERATO PER IL COMPUTER
-*/
+/**************************************
+ ************** UTILITIES FUNCTION
+ **************************************/
+
+/**LA FUNZIONA "generaNumero" ANDRA A DICHIARARE UN NUMERO RANDOM GENERATO PER IL COMPUTER
+ * @param {number} num 
+ * @returns RITORNA NUMERO RANDOM GENERATO
+ */
 function generaNumero (num){
-
     var num = Math.floor(Math.random ()*5)+1;
     return num;
 }
 
-/* 
-* LA FUNZIONE "pariDispari" ANDRA A DICHIARARE SE IL NUMERO SELEZIONATO SARA PARI O DISPARI
-*/
+/**LA FUNZIONE "pariDispari" ANDRA A DICHIARARE SE IL NUMERO SELEZIONATO SARA PARI O DISPARI
+ * @param {number} num1 SELEZIONARE NUMERO DA SOMMARE
+ * @param {number} num2 SELEZIONARE NUMERO DA SOMMARE
+ * @returns RITORNA PARI SE IL NUMERO SOMMATO è UN NUMERO PARI RITORNA DISPARI IN CASO FALSE
+ */
 function pariDispari (num1, num2){
     var tot = num1 + num2;
     if(tot % 2 === 0){
