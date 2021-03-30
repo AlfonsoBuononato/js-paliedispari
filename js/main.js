@@ -50,6 +50,8 @@ while(inserisciPariDispari !== "pari" && inserisciPariDispari !== "dispari"){
 }
 console.log("inserisci pari o dispari: " + inserisciPariDispari);
 
+//1. INSERISCI UN NUMERO DA 1 A 5;
+
 var numero = parseInt(prompt("inserisci un numero da 1 a 5."))
 //VALIDAZIONE NUMERO
 while(isNaN(numero) || numero < 1 || numero > 5){
@@ -57,22 +59,22 @@ while(isNaN(numero) || numero < 1 || numero > 5){
 }
 console.log("inserisci un numero da 1 a 5: " + numero);
 
-
+// 2.GENERIAMO ATTRAVERSO LA FUNZIONE "generaNumero" UN NUMERO RANDOM PER IL COMPUTER
 var numeroComputer = 0;
 var numeroRandom = generaNumero(numeroComputer);
-console.log(numeroRandom);
+console.log("numero random generato dal computer: " + numeroRandom);
 
 //3.SOMMIAMO I DUE NUMERI.
 
 var somma = numero + numeroRandom;
 console.log("somma dei due numeri inseriti: " + somma);
 
-//5. USO LA FUNZIONE PARIDISPARI PER STABILIRE LA SOMMA TRA I DUE PARAMETRI SE è PARI O DISPARI;
+//4. USO LA FUNZIONE PARIDISPARI PER STABILIRE LA SOMMA TRA I DUE PARAMETRI SE è PARI O DISPARI;
 
-var parametroPariDispari = pariDispari(numero + numeroRandom);
-console.log(parametroPariDispari);
+var parametroPariDispari = pariDispari(numero, numeroRandom);
+console.log("il numero è: " + parametroPariDispari);
 
-//6. STABILIAMO IL VINCITORE 
+//5. STABILIAMO IL VINCITORE 
 if(parametroPariDispari === inserisciPariDispari){
     console.log("HAI VINTO");
 }else{
@@ -81,18 +83,21 @@ if(parametroPariDispari === inserisciPariDispari){
 
 /*UTILITIES FUNCTION*/
 
-//2.FUNZIONE PER GENERARE UN NUMERO RANDOM
+/* 
+* LA FUNZIONA "generaNumero" ANDRA A DICHIARARE UN NUMERO RANDOM GENERATO PER IL COMPUTER
+*/
 function generaNumero (num){
 
     var num = Math.floor(Math.random ()*5)+1;
     return num;
 }
 
-//4. FUNZIONE PER STABILIRE SE è PARI O DISPARI;
-
-function pariDispari (num1){
-    
-    if(num1 % 2 === 0){
+/* 
+* LA FUNZIONE "pariDispari" ANDRA A DICHIARARE SE IL NUMERO SELEZIONATO SARA PARI O DISPARI
+*/
+function pariDispari (num1, num2){
+    var tot = num1 + num2;
+    if(tot % 2 === 0){
         return "pari";
     }
     return "dispari";
